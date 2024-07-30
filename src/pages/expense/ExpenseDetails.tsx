@@ -73,7 +73,9 @@ const ExpenseDetails = () => {
               <tr>
                 <th>Amount</th>
                 <td>
-                  {expense ? CurrencyUtils.formatToINR(expense.amount) : "N/A"}
+                  {expense
+                    ? CurrencyUtils.formatToINR(parseFloat(expense.amount))
+                    : "N/A"}
                 </td>
               </tr>
               <tr>
